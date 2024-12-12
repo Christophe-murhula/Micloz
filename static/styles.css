@@ -1,9 +1,10 @@
 :root {
-  --bg-color: #1e1e1e;
+  --bg-color: #3b3b3b;
   --main-color: #ffffff; /* text color */
   --main-bg-color: #050505; /* element bg color */
   --secondary-color: #7a7a7a; /* secondary text color */
 
+  --min-spacing: 4px; /* for small radius, paddind and/or margin */
   --child-spacing: 8px;
   --parent-spacing: 16px;
   --block-spacing: 24px;
@@ -48,16 +49,63 @@ header a img {
   width: 6.7rem;
 }
 
+/* SECTION STYLES */
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* SIDE BAR STYLES */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  padding: var(--parent-spacing);
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--parent-spacing);
+  box-shadow: 0px var(--child-spacing) var(--parent-spacing)
+    var(--main-bg-color);
+}
+
+/* SIDE GROUP ELEMENTS STYLES */
+/* side group elements list */
+.sidebar-group ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--child-spacing);
+  padding: 0px;
+}
+/* side elements style */
+.sidebar-group ul li {
+  font-size: 1.2rem;
+  padding: var(--child-spacing);
+  text-align: center;
+  border-radius: var(--child-spacing);
+}
+.sidebar-group ul li.primary {
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0px 0px 2px var(--secondary-color);
+}
+.sidebar-group ul li:hover {
+  background-color: var(--secondary-color);
+}
+
+/* SEPARATOR */
+.separator {
+  width: 2rem;
+  border-bottom: 1px solid var(--secondary-color);
+  margin-top: var(--child-spacing);
+  margin-bottom: var(--child-spacing);
+}
+
 /* FOOTER STYLES */
 footer {
   width: 100%;
-  /* position: absolute;
-  bottom: 0;
-  padding: initial; */
-  /* padding: inherit;
-  
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: var(--child-spacing); */
+  gap: var(--child-spacing);
 }
