@@ -16,7 +16,7 @@
 body {
   height: 100vh;
   padding: var(--block-spacing);
-  box-sizing: border-box; /* to make absolute positionned element be affected by the padding */
+  box-sizing: border-box;
   background-color: var(--bg-color);
   color: var(--main-color);
 }
@@ -27,6 +27,13 @@ body {
 
 #lateral-menu {
   background-color: var(--main-bg-color);
+}
+
+/* CONTENT DIV STYLES */
+.content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5% 90% 5%;
 }
 
 /* STYLES ON THE HEADER */
@@ -43,6 +50,14 @@ header a img {
 
 /* FOOTER STYLES */
 footer {
-  position: absolute;
+  width: 100%;
+  /* position: absolute;
   bottom: 0;
+  padding: initial; */
+  /* padding: inherit;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--child-spacing); */
 }
