@@ -3,6 +3,10 @@
   --main-color: #ffffff; /* text color */
   --main-bg-color: #050505; /* element bg color */
   --secondary-color: #7a7a7a; /* secondary text color */
+
+  --child-spacing: 8px;
+  --parent-spacing: 16px;
+  --block-spacing: 24px;
 }
 
 * {
@@ -21,4 +25,21 @@ body {
 
 #lateral-menu {
   background-color: var(--main-bg-color);
+}
+
+/* MAIN CONTENT STYLES */
+.content {
+  padding: var(--block-spacing);
+}
+
+/* STYLES ON THE HEADER */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header a img {
+  height: 2rem;
+  width: 6.7rem;
 }
