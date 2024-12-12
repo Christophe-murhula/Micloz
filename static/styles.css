@@ -15,6 +15,8 @@
 
 body {
   height: 100vh;
+  padding: var(--block-spacing);
+  box-sizing: border-box; /* to make absolute positionned element be affected by the padding */
   background-color: var(--bg-color);
   color: var(--main-color);
 }
@@ -27,11 +29,6 @@ body {
   background-color: var(--main-bg-color);
 }
 
-/* MAIN CONTENT STYLES */
-.content {
-  padding: var(--block-spacing);
-}
-
 /* STYLES ON THE HEADER */
 header {
   display: flex;
@@ -42,4 +39,10 @@ header {
 header a img {
   height: 2rem;
   width: 6.7rem;
+}
+
+/* FOOTER STYLES */
+footer {
+  position: absolute;
+  bottom: 0;
 }
